@@ -323,16 +323,28 @@
 .ticker-red {
     background: #F84F4C;
 }
+.single-product-box {
+    text-align: center;
+}
 .product-bottom-hover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
-    bottom: 30px;
+    bottom: -50px;
     background: #fff;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.45s;
 }
+.single-product-box:hover .product-bottom-hover{
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px;
+}
+
 .product-bottom-hover a {
     display: block;
     float: left;
@@ -347,5 +359,30 @@
 .product-bottom-hover a:hover{
     background-color: #000;
     color: #ffff;
+}
+.owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+    cursor: hand;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -50px;
+    background: #000;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 40px;
+    color: #fff;  
+    transition: 0.45s;
+}
+.owl-carousel .owl-nav .owl-next:hover, .owl-carousel .owl-nav .owl-prev:hover{
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.owl-carousel .owl-nav .owl-next{
+    left: auto;
+    right: -50px;
 }
 /* ===============104============== */

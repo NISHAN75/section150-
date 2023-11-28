@@ -68,9 +68,29 @@ mainSlider();
 
 
 // owlCarousel
-$('.owl-carousel').owlCarousel({
+$('.owl-carouselp').owlCarousel({
     loop:true,
     margin:0,
+	items:1,
+	nav:true,
+	navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+	dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        767:{
+            items:3
+        },
+        992:{
+            items:5
+        }
+    }
+})
+// owlCarousel
+$('.product-carousel').owlCarousel({
+    loop:true,
+    margin:20,
 	items:1,
 	navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
     nav:true,
@@ -83,7 +103,7 @@ $('.owl-carousel').owlCarousel({
             items:3
         },
         992:{
-            items:5
+            items:4
         }
     }
 })
