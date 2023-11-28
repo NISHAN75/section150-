@@ -1,10 +1,4 @@
-/*
-  Theme Name: Name - Multipurpose HTML Template
-  Author: mdsalim400@gmail.com
-  Support: admin@gmail.com
-  Description: Creative  HTML5 template.
-  Version: 1.0
-*/
+
 
 /* CSS Index
 -----------------------------------
@@ -26,8 +20,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700');
  body {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
+    color: #000;
+    font-size: 16px;
 }
 
 /* gobal css */
@@ -36,70 +32,246 @@
 }
 
 /* gobal csss */
-.author-img {
+/* ===============102============== */
+.section-title h2 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+.form-element {
+    position: relative;
+}
+
+.form-element label {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+}
+.form-element input , .form-element textarea {
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 14px;
+    padding: 40px 15px 10px 15px;
+}
+.form-element textarea {
+    max-height: 150px;
+}
+.submit-btn {
+    float: right;
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+
+}
+
+.form-element input:focus ,  .form-element textarea:focus{
+        background-color: #ddd;
+        outline: none;
+}
+.submit-btn {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0;
+    padding: 15px 60px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: 0.45s;
+}
+.submit-btn:hover {
+   background: transparent;
+   border: 1px solid red;
+   color: #000;
+}
+/* ===============102============== */
+
+
+/* ===============103============== */
+
+.fix{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.newsletter-bg{
+    background-image: url('../img/n-bg.jpg');
+}
+.newsletter-bg {
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 180px;
+}
+.newsletter-bg h2 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.newsletter-bg::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    z-index: -1;
+    opacity: 0.7;
+}
+.newsletter-bg .news-letter-form input[type="email"] {
+    background-color: #fff;
+    opacity: 0.5;
+    border: 1px solid #877975;
+    padding: 12px 20px;
+    width: 70%;
+    border-radius: 50px;
+}
+.newsletter-bg .news-letter-form input[type="email"]:focus{
+    outline: none;
+    background: #333;
+    opacity: 0.6;
+    
+}
+.newsletter-bg .news-letter-form input[type="submit"] {
+    background: #2AB89D;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    padding: 13px 30px;
+    width: 27%;
+    border-radius: 50px;
+}
+.news-letter-form form {
     margin-bottom: 25px;
 }
-.author-img-hover {
-    position: absolute;
-    left: -100px;
-    top: 0;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
+.news-letter-form p {
+    font-style: italic;
+}
+.single-bordered-box {
+    float: left;
+    width: 50%;
+    border-left: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    padding: 50px 80px;
     text-align: center;
-    color: #555;
-    font-size: 17px;
-	visibility: hidden;
-	opacity: 0;
-	transition: 0.3s ease-in;
+    min-height: 345px;
 }
-.author-wrap:hover .author-img-hover {
-	left: 0;
-    opacity: 1;
-    visibility: visible;
+.bordered-box {
+    border-right: 1px solid #ededed;
+    overflow: hidden;
+    margin-top: -250px;
+    position: relative;
+    background-color: #fff;
+    z-index: 9;
 }
-
-.author-img-hover::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: #ddd;
-    content: "";
-    opacity: 0.8;
-    z-index: -1;
-}
-.author-img-hover-inner {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.author-img-hover-inner h2 {
+.single-bordered-box h4 {
     font-size: 20px;
-    font-weight: 300;
     text-transform: uppercase;
-	letter-spacing: 5px;
+    margin-bottom: 25px;
+    font-weight: 900;
 }
-.author-wrap h3 {
-    font-size: 22px;
-    font-weight: 300;
-    text-align: center;
+.single-testimonial-box {
+    font-style: italic;
+}
+.author-name {
+    font-weight: 700;
+    margin-top: 20px;
+    color: #000;
     text-transform: uppercase;
-    margin: 0;
-    letter-spacing: 8px;
+    font-style: normal;
+}
+.boxed-btn {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.45s;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+.boxed-btn:hover{
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+.single-bordered-box a > span{
+    margin-left: 3px;
+    transition: 0.45s;
+}
+.single-bordered-box a:hover > span{
+    margin-left: 8px;
 }
 
-.author-wrap h3 > span {
-    font-size: 74%;
-    margin-top: 10px;
+
+/* ===============103============== */
+/* ===============104============== */
+.product-bg {
+    background-position: top center;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+}
+.product-bg-1{
+    background-image: url('../img/fashion-s-1.jpg');
+}
+.ticker {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #000;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50%;
+}
+.ticker-green {
+    background: #31B193;
+}
+.ticker-red {
+    background: #F84F4C;
+}
+.product-bottom-hover {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    bottom: 30px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.product-bottom-hover a {
     display: block;
+    float: left;
+    width: 33.3333%;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    transition: 0.45s;
 }
-.social-links a {
-    color: #555;
-    margin: 10px;
+.product-bottom-hover a:hover{
+    background-color: #000;
+    color: #ffff;
 }
-.social-links a:hover{
-	color: #000;
-}
+/* ===============104============== */
