@@ -106,7 +106,32 @@ $('.product-carousel').owlCarousel({
             items:4
         }
     }
-})
+});
+
+$('.portfolio-items-118').owlCarousel({
+    loop: true,
+    margin: 10,
+    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 1000,
+    autoplayHoverPause: true,
+    animateOut: 'fadeOut', // Add your custom animateOut class
+    animateIn: 'fadeIn',   // Add your custom animateIn class
+    responsive: {
+        0: {
+            items: 1
+        },
+        767: {
+            items: 3
+        },
+        992: {
+            items: 4
+        }
+    }
+});
+
 
 
 /* magnificPopup img view */
@@ -136,6 +161,8 @@ $('.grid').imagesLoaded( function() {
 	});
 });
 
+
+
 // filter items on button click
 $('.portfolio-menu').on( 'click', 'button', function() {
   var filterValue = $(this).attr('data-filter');
@@ -149,6 +176,23 @@ $('.portfolio-menu button').on('click', function(event) {
 	event.preventDefault();
 });
 
+// hover animation
+$('.single-portfolio-item').hover(function(){
+	$('.single-portfolio-item .portfolio-hover h2').removeClass('animate__animated animate__lightSpeedInLeft');
+	$('.single-portfolio-item .portfolio-hover p').removeClass('animate__animated animate__lightSpeedInRight');
+	$(this).find('.portfolio-hover h2').addClass('animate__animated animate__lightSpeedInLeft');
+	$(this).find('.portfolio-hover p').addClass('animate__animated animate__lightSpeedInRight');
+});
+
+$('.menu-trigger').on('click' , function(){
+  $('.offcanvs-menu').addClass('active animate__animated animate__fadeInRight');
+  $('.offcanvus-overlay').addClass('active');
+})
+$('.menu-close i.fa-times , .offcanvus-overlay').on('click' , function(){
+  $('.offcanvs-menu').removeClass('active animate__animated animate__fadeInRight');
+  $('.offcanvus-overlay').removeClass('active');
+});
+$(".header-area").headroom();
 
 
 

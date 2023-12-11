@@ -677,6 +677,9 @@
 	color: #222;
 }
 /* black overlay */
+.hidden-x{
+	overflow-x: hidden;
+}
 
 [data-overlay] {
 	position: relative;
